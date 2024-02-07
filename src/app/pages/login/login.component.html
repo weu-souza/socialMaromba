@@ -1,0 +1,46 @@
+<section class="login-bg  flex h-full">
+  <div class="login-card flex flex-column flex-1  mx-auto border-round my-8  ">
+    <form class="flex flex-column flex-1 justify-content-center" style="max-width: 833px;margin:0 60px 0 60px;"
+          [formGroup]="loginForm">
+
+      <!--      nome    -->
+      <div class=" flex flex-column">
+        <label class="my-2">login</label>
+        <input class="border-round p-4 my-2" placeholder="digite seu usuario" formControlName="nome" [ngClass]="{'border-red-500': loginForm.controls['nome'].invalid &&
+           (loginForm.controls['nome'].touched || loginForm.controls['nome'].dirty), 'border-green-700':loginForm.controls['nome'].valid} "
+               [class.valid]="loginForm.controls['nome'].valid"
+               [class.invalid]="loginForm.controls['nome'].invalid &&
+           (loginForm.controls['nome'].touched || loginForm.controls['nome'].dirty)">
+
+        <span *ngIf="loginForm.controls['nome'].invalid &&
+           (loginForm.controls['nome'].touched || loginForm.controls['nome'].dirty)">
+          <small class="text-red-500" *ngIf="loginForm.controls['nome'].hasError('required')">
+            Esse campo precisa ser preenchido.
+          </small>
+           </span>
+      </div>
+      <!--      senha    -->
+      <div class="flex flex-column my-3">
+        <label class="">senha</label>
+        <input class="border-round p-4 my-2 " placeholder="digite sua senha" formControlName="senha" [ngClass]="{'border-red-500': loginForm.controls['senha'].invalid &&
+           (loginForm.controls['senha'].touched || loginForm.controls['senha'].dirty), 'border-green-700':loginForm.controls['senha'].valid} "
+               [class.valid]="loginForm.controls['senha'].valid"
+               [class.invalid]="loginForm.controls['senha'].invalid &&
+           (loginForm.controls['senha'].touched || loginForm.controls['senha'].dirty)">
+        <span *ngIf="loginForm.controls['senha'].invalid &&
+           (loginForm.controls['senha'].touched || loginForm.controls['senha'].dirty)">
+          <small class="text-red-500" *ngIf="loginForm.controls['senha'].hasError('required')" >
+            Esse campo precisa ser preenchido.
+          </small>
+      </span>
+      </div>
+    </form>
+<!--    btns   -->
+    <div class="flex flex-wrap justify-content-between mb-6 " style="margin:0 60px 0 60px;">
+      <button class="btn-register my-3 ">registrar</button>
+      <button class="btn-login">login</button>
+    </div>
+
+  </div>
+
+</section>
