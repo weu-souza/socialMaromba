@@ -1,0 +1,80 @@
+.register-card{
+  max-width: 950px;
+  background: rgba(3, 3, 3, 0.62);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+
+  label {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  input {
+    border:  rgba(0, 0, 0, 0.01) solid;
+    font-size: 20px;
+    color: #737373;
+    width: 350px;
+    @media(max-width: 500px) {
+      border: 2px white solid;
+    }
+  }
+  small{
+    font-size: 20px;
+    @media(max-width: 500px){
+      font-size:15px;
+    }
+  }
+
+  input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
+
+  .btn-login {
+    border: none;
+    border-radius: 8px;
+    background: #fefefe;
+    color: #737373;
+    font-weight: bold;
+    font-size: 25px;
+    width: 190px;
+    padding: 15px;
+    cursor: pointer;
+    @media(max-width: 500px) {
+      font-size: 20px;
+      padding: 10px;
+      margin: 0 auto;
+    }
+
+  }
+
+  .btn-login:hover {
+    background: linear-gradient(80deg, rgba(217, 217, 217, 1) 0%, rgba(189, 173, 173, 0.3575805322128851) 80%, rgba(174, 158, 158, 0) 100%);
+    color: #4E4A4A;
+    @media(max-width: 500px) {
+      background: #fefefe;
+    }
+  }
+
+  .btn-register {
+    border: none;
+    color: #ffffff;
+    background: none;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    @media(max-width: 500px) {
+      //width: 60px;
+      font-size: 20px;
+      margin: 0 auto;
+    }
+  }
+
+  .btn-register:hover {
+    border-bottom: #ffffff 2px solid;
+    @media (max-width: 500px) {
+      border: none;
+    }
+  }
+
+
+}

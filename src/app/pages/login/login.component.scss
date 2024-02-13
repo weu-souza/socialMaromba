@@ -1,15 +1,16 @@
 .login-bg {
-  background-image: url("/assets/img/img-login.jpg");
+  //background-image: url("/assets/img/img-login.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   @media (max-width: 500px) {
     background-image: none;
+    .btn-container{
+      margin:0 60px 0 60px;
+    }
   }
 
   .login-card {
-
     max-width: 953px;
-    height: 610px;
     background: rgba(3, 3, 3, 0.62);
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 
@@ -19,7 +20,7 @@
     }
 
     input {
-      border: 3px white solid;
+      border: 3px rgba(0, 0, 0, 0.01) solid;
       font-size: 20px;
       color: #737373;
       @media(max-width: 500px) {

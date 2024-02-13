@@ -1,1 +1,133 @@
-<p>registro works!</p>
+<section class="flex">
+<div class="register-card mx-auto mt-8 border-round  p-6" >
+
+
+  <form [formGroup]="loginForm" class=" flex flex-wrap  justify-content-between p-4 ">
+<!--    nome-->
+    <div class="flex flex-column">
+      <label class="my-1">nome</label>
+      <input type="text" class="border-round p-3 my-1" placeholder="digite seu nome" formControlName="nome" [ngClass]="{'border-red-500': loginForm.controls['nome'].invalid &&
+           (loginForm.controls['nome'].touched || loginForm.controls['nome'].dirty), 'border-green-700':loginForm.controls['nome'].valid} "
+             [class.valid]="loginForm.controls['nome'].valid"
+             [class.invalid]="loginForm.controls['nome'].invalid &&
+           (loginForm.controls['nome'].touched || loginForm.controls['nome'].dirty)">
+
+      <span *ngIf="loginForm.controls['nome'].invalid &&
+           (loginForm.controls['nome'].touched || loginForm.controls['nome'].dirty)">
+          <small class="text-red-500" *ngIf="loginForm.controls['nome'].hasError('required')">
+            Esse campo precisa ser preenchido.
+          </small>
+           </span>
+    </div>
+<!--    email-->
+    <div class="flex  flex-column">
+      <label class="my-1">email</label>
+      <input type="text" class="border-round p-3 my-1" placeholder="digite seu email" formControlName="email" [ngClass]="{'border-red-500': loginForm.controls['email'].invalid &&
+           (loginForm.controls['email'].touched || loginForm.controls['email'].dirty), 'border-green-700':loginForm.controls['email'].valid} "
+             [class.valid]="loginForm.controls['email'].valid"
+             [class.invalid]="loginForm.controls['email'].invalid &&
+           (loginForm.controls['email'].touched || loginForm.controls['email'].dirty)">
+
+      <span *ngIf="loginForm.controls['email'].invalid &&
+           (loginForm.controls['email'].touched || loginForm.controls['email'].dirty)">
+          <small class="text-red-500" *ngIf="loginForm.controls['email'].hasError('required')">
+            Esse campo precisa ser preenchido.
+          </small>
+           </span>
+    </div>
+
+    <!--    senha-->
+    <div class="flex  flex-column">
+
+      <label class="my-1">senha</label>
+      <input type="password" class="border-round p-3 my-1" placeholder="digite sua senha" formControlName="senha" [ngClass]="{'border-red-500': loginForm.controls['senha'].invalid &&
+           (loginForm.controls['senha'].touched || loginForm.controls['senha'].dirty), 'border-green-700':loginForm.controls['senha'].valid} "
+             [class.valid]="loginForm.controls['senha'].valid"
+             [class.invalid]="loginForm.controls['senha'].invalid &&
+           (loginForm.controls['senha'].touched || loginForm.controls['senha'].dirty)">
+
+      <span *ngIf="loginForm.controls['senha'].invalid &&
+           (loginForm.controls['senha'].touched || loginForm.controls['senha'].dirty)">
+          <small class="text-red-500" *ngIf="loginForm.controls['senha'].hasError('required')">
+            Esse campo precisa ser preenchido.
+          </small>
+           </span>
+    </div>
+
+
+<!--    celular-->
+    <div class="flex  flex-column">
+      <label class="my-1">celular</label>
+      <input type="text" class="border-round p-3 my-1" placeholder="digite seu celular" formControlName="celular" [ngClass]="{'border-red-500': loginForm.controls['celular'].invalid &&
+           (loginForm.controls['celular'].touched || loginForm.controls['celular'].dirty), 'border-green-700':loginForm.controls['celular'].valid} "
+             [class.valid]="loginForm.controls['celular'].valid"
+             [class.invalid]="loginForm.controls['celular'].invalid &&
+           (loginForm.controls['celular'].touched || loginForm.controls['celular'].dirty)">
+
+      <span *ngIf="loginForm.controls['celular'].invalid &&
+           (loginForm.controls['celular'].touched || loginForm.controls['celular'].dirty)">
+          <small class="text-red-500" *ngIf="loginForm.controls['celular'].hasError('required')">
+            Esse campo precisa ser preenchido.
+          </small>
+           </span>
+    </div>
+<!--    endereco-->
+    <div class="flex  flex-column">
+      <label class="my-1">endereço</label>
+      <input type="text" class="border-round p-3 my-1" placeholder="digite seu endereço" formControlName="endereco" [ngClass]="{'border-red-500': loginForm.controls['endereco'].invalid &&
+           (loginForm.controls['endereco'].touched || loginForm.controls['endereco'].dirty), 'border-green-700':loginForm.controls['endereco'].valid} "
+             [class.valid]="loginForm.controls['endereco'].valid"
+             [class.invalid]="loginForm.controls['endereco'].invalid &&
+           (loginForm.controls['endereco'].touched || loginForm.controls['endereco'].dirty)">
+
+      <span *ngIf="loginForm.controls['endereco'].invalid &&
+           (loginForm.controls['endereco'].touched || loginForm.controls['endereco'].dirty)">
+          <small class="text-red-500" *ngIf="loginForm.controls['endereco'].hasError('required')">
+            Esse campo precisa ser preenchido.
+          </small>
+           </span>
+    </div>
+<!--    nascimento-->
+    <div class="flex  flex-column">
+      <label class="my-1">nascimento</label>
+      <input type="text" class="border-round p-3 my-1" placeholder="digite seu nascimento" formControlName="nascimento" [ngClass]="{'border-red-500': loginForm.controls['nascimento'].invalid &&
+           (loginForm.controls['nascimento'].touched || loginForm.controls['nascimento'].dirty), 'border-green-700':loginForm.controls['nascimento'].valid} "
+             [class.valid]="loginForm.controls['nascimento'].valid"
+             [class.invalid]="loginForm.controls['nascimento'].invalid &&
+           (loginForm.controls['nascimento'].touched || loginForm.controls['nascimento'].dirty)">
+
+      <span *ngIf="loginForm.controls['nascimento'].invalid &&
+           (loginForm.controls['nascimento'].touched || loginForm.controls['nascimento'].dirty)">
+          <small class="text-red-500" *ngIf="loginForm.controls['nascimento'].hasError('required')">
+            Esse campo precisa ser preenchido.
+          </small>
+           </span>
+    </div>
+<!--    academia-->
+    <div class="flex  flex-column">
+      <label class="my-1">academia</label>
+      <input type="text" class="border-round p-3 my-1" placeholder="digite sua academia" formControlName="academia" [ngClass]="{'border-red-500': loginForm.controls['academia'].invalid &&
+           (loginForm.controls['academia'].touched || loginForm.controls['academia'].dirty), 'border-green-700':loginForm.controls['academia'].valid} "
+             [class.valid]="loginForm.controls['academia'].valid"
+             [class.invalid]="loginForm.controls['academia'].invalid &&
+           (loginForm.controls['academia'].touched || loginForm.controls['academia'].dirty)">
+
+      <span *ngIf="loginForm.controls['nome'].invalid &&
+           (loginForm.controls['nome'].touched || loginForm.controls['academia'].dirty)">
+          <small class="text-red-500" *ngIf="loginForm.controls['academia'].hasError('required')">
+            Esse campo precisa ser preenchido.
+          </small>
+           </span>
+    </div>
+
+
+
+
+  </form>
+  <!--    btns-->
+  <div class=" btn-container flex flex-wrap  justify-content-between mt-8 p-4">
+    <button class="btn-register my-3 " (click)="voltar()">voltar</button>
+    <button class="btn-login" (click)="register()">registro</button>
+  </div>
+</div>
+</section>
