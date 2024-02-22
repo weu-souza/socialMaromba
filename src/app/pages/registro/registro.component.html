@@ -112,8 +112,8 @@
              [class.invalid]="loginForm.controls['academia'].invalid &&
            (loginForm.controls['academia'].touched || loginForm.controls['academia'].dirty)">
 
-      <span *ngIf="loginForm.controls['nome'].invalid &&
-           (loginForm.controls['nome'].touched || loginForm.controls['academia'].dirty)">
+      <span *ngIf="loginForm.controls['academia'].invalid &&
+           (loginForm.controls['academia'].touched || loginForm.controls['academia'].dirty)">
           <small class="text-red-500" *ngIf="loginForm.controls['academia'].hasError('required')">
             Esse campo precisa ser preenchido.
           </small>

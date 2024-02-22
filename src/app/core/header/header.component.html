@@ -1,1 +1,25 @@
-<p>header works!</p>
+<header class="header-bg p-2 ">
+  <section class="flex justify-content-between mx-auto " style="max-width: 1200px">
+    <a class="align-self-center " routerLink="/home"><img ngSrc="assets/img/logo.png" height="80" width="80"
+                                                          alt="logo social maromba"></a>
+    <div class="align-self-center flex ">
+      <p class=" p-2">usuário</p>
+      <a class="" (click)="AbrirFecharMenu()" style="cursor:pointer;"><img class="" ngSrc="assets/img/perfil.svg"
+                                                                           height="30" width="30"
+                                                                           alt="foto perfil"> </a>
+    </div>
+
+
+  </section>
+
+</header>
+<div class="justify-content-end mx-auto" style="max-width: 1200px">
+  <div class="flex justify-content-end submenu-container">
+    <ul *ngIf="menu" class=" p-2 slide slide-bottom" >
+      <li class="p-2 "><a routerLink="/perfil">Perfil</a></li>
+      <li class="p-2"><a routerLink="/treino">Treino</a></li>
+      <li class="p-2"><a (click)="sair()">Sair</a></li>
+    </ul>
+  </div>
+</div>
+

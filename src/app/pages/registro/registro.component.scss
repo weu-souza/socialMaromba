@@ -18,7 +18,7 @@
     }
   }
   small{
-    font-size: 20px;
+    font-size: 15px;
     @media(max-width: 500px){
       font-size:15px;
     }
@@ -35,9 +35,9 @@
     background: #fefefe;
     color: #737373;
     font-weight: bold;
-    font-size: 25px;
-    width: 190px;
-    padding: 15px;
+    width: 150px;
+    font-size: 20px;
+    padding: 20px;
     cursor: pointer;
     @media(max-width: 500px) {
       font-size: 20px;
@@ -60,8 +60,10 @@
     color: #ffffff;
     background: none;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
+    border-bottom: rgba(255, 255, 255, 0.01) 2px solid;
+    padding: 10px;
     @media(max-width: 500px) {
       //width: 60px;
       font-size: 20px;
