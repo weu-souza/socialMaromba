@@ -18,6 +18,16 @@ export class HeaderComponent {
 
   sair() {
     this.router.navigateByUrl('/login')
+    this.menu = false;
   }
 
+  navegarPerfil() {
+    this.router.navigateByUrl('/perfil')
+    this.menu = false;
+  }
+
+  navegarTreino() {
+    this.router.navigateByUrl('/treino')
+    this.menu = false;
+  }
 }
